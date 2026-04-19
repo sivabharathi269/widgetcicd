@@ -1,0 +1,15 @@
+﻿Analyzing WidgetHub...                                          
+
+  error - The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.  - lib\core\theme\app_theme.dart:13:18 - argument_type_not_assignable
+  error - The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.  - lib\core\theme\app_theme.dart:29:18 - argument_type_not_assignable
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\api\api_detail_screen.dart:41:78 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:79:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\faq\faq_screen.dart:80:80 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\onboarding\onboarding_screen.dart:134:59 - deprecated_member_use
+   info - The imported package 'uuid' isn't a dependency of the importing package - lib\features\tasks\task_provider.dart:4:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:uuid/uuid.dart' - lib\features\tasks\task_provider.dart:4:8 - uri_does_not_exist
+  error - The name 'Uuid' isn't a class - lib\features\tasks\task_provider.dart:12:23 - creation_with_non_type
+  error - The function 'StateProvider' isn't defined - lib\features\tasks\task_provider.dart:61:29 - undefined_function
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\tour\guided_tour_overlay.dart:41:43 - deprecated_member_use
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+
