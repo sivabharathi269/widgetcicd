@@ -17,7 +17,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final List<Map<String, String>> _onboardingData = [
     {
       'title': 'Welcome to WidgetHub',
-      'description': 'Your ultimate productivity and learning dashboard.',
+      'description': 'Your ultimate productivity and  practice.',
       'icon': 'widgets',
     },
     {
