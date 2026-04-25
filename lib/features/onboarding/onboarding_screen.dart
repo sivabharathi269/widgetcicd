@@ -16,7 +16,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 //instead of writing ui three times manually it just store data in a list and build ui dynamically
   final List<Map<String, String>> _onboardingData = [
     {
-      'title': 'Welcome... this is  WidgetHub',
+      'title': 'Welcome ...!!!! this is  WidgetHub',
       'description': 'Your ultimate productivity .',
       'icon': 'widgets',
     },
