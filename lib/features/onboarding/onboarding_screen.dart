@@ -21,7 +21,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       'icon': 'widgets',
     },
     {
-      'title': 'Learn Flutter',
+      'title': 'Learn Flutter easily',
       'description': 'Explore various widgets in action across all platforms.',
       'icon': 'school',
     },
