@@ -5,10 +5,7 @@ pipeline {
         PATH = "C:\\src\\flutter\\bin;C:\\nvm4w\\nodejs;C:\\Windows\\System32;${env.PATH}"
     }
 
-    // ✅ Polling (needed for PR detection in normal pipeline job)
-    triggers {
-        pollSCM('H/2 * * * *')
-    }
+  
 
     stages {
 
