@@ -5,35 +5,34 @@ pipeline {
         PATH = "C:\\src\\flutter\\bin;C:\\nvm4w\\nodejs;C:\\Windows\\System32;${env.PATH}"
     }
 
-
-
     stages {
 
         stage('Checkout Code') {
             steps {
                 script {
-                    def branch = env.BRANCH_NAME ?: "main"
-                    echo "Checking out branch: ${branch}"
-                    git branch: branch, url: 'https://github.com/sivabharathi269/widgetcicd.git'
+                    echo "Branch: ${env.BRANCH_NAME}"
+                    echo "PR ID: ${env.CHANGE_ID}"
+
+                    // Checkout automatically based on PR/branch
+                    checkout scm
                 }
             }
         }
 
-        stage('Detect Branch') {
-            steps {
-                echo "Running on branch: ${env.BRANCH_NAME}"
-            }
-        }
-
-        // ✅ ONLY run tests for PR (non-main branches)
-        stage('Run Tests') {
+        stage('Install Dependencies') {
             when {
-                expression {
-                    return env.BRANCH_NAME != "main"
-                }
+                changeRequest()
             }
             steps {
                 bat 'flutter pub get'
+            }
+        }
+
+        stage('Run Tests') {
+            when {
+                changeRequest()
+            }
+            steps {
                 bat 'flutter test'
             }
         }
